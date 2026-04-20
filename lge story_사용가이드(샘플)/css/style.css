@@ -121,11 +121,15 @@
 
         /* text assets  */
         .lge_story_container .preline { white-space: pre-line; } /* 줄바꿈 유지 스타일 */
-        .lge_story_container .link_text { display: inline-block; color: var(--link-text-color) !important; font-size: 16px; font-weight: 700; line-height: 1.6; letter-spacing: -0.01em; text-decoration: underline; text-underline-offset: 2px; } /* 링크 텍스트 스타일 */
         .lge_story_container .italic_text { font-style: italic; } /* 이탤릭 텍스트 스타일 */
         .lge_story_container .underline_text { text-decoration: underline; } /* 밑줄 텍스트 스타일 */
         .lge_story_container .strikethrough_text { text-decoration: line-through; } /* 취소선 텍스트 스타일 */
         .lge_story_container .highlight_text { background-color: yellow; } /* 강조 텍스트 스타일 */
+
+        .lge_story_container .link_text_group { display: flex; justify-content: flex-start; align-items: stretch; flex-wrap: wrap; gap: 4px 20px; }
+        .lge_story_container .link_text_group .link_text { padding: 10px 0; line-height: 1.25; }
+        .lge_story_container .link_text_group + .link_text_group { margin-top: 4px; }
+        .lge_story_container .link_text { display: inline-block; color: var(--link-text-color) !important; font-size: 16px; font-weight: 700; line-height: 1.6; letter-spacing: -0.01em; text-decoration: underline; text-underline-offset: 2px; } /* 링크 텍스트 스타일 */
         
         /* font size */
         .lge_story_container .font_bold { font-weight: bold !important; } /* 굵은 텍스트 스타일 */
@@ -142,6 +146,8 @@
         .lge_story_container .font_40 { font-size: 40px !important; }
 
         /* margin */
+        .lge_story_container .mt2 { margin-top: 2px !important; }
+        .lge_story_container .mt4 { margin-top: 4px !important; }
         .lge_story_container .mt10 { margin-top: 10px !important; }
         .lge_story_container .mt12 { margin-top: 12px !important; }
         .lge_story_container .mt20 { margin-top: 20px !important; }
@@ -279,7 +285,13 @@
         .lge_story_container .lge_story_list_tip b { display: block; font-size: 32px; font-weight: 700; line-height: 1.4; }
         .lge_story_container .lge_story_list_tip span { display: block; font-size: 20px; font-weight: 400; line-height: 1.4; letter-spacing: -0.01em; margin-top: 20px }
         .lge_story_container .lge_story_list_tip a { display: inline-block; margin-top: 10px; margin-right: 20px; font-size: 16px; font-weight: 700; line-height: 1.4; letter-spacing: -0.01em; }
-        /*  core end */
+
+        /*  video  */
+        .lge_story_video_area { poadding: 0 20px; overflow: hidden; }
+        .lge_story_video_area iframe { width: 100%; height: auto; aspect-ratio: 1.78/1; }
+        .lge_story_video_timeline li {  list-style-type: none !important; }
+
+/*  core end */
 
 
 /*  구매가이드 */
@@ -328,4 +340,10 @@
         #lge_story_use_guide .lge_story_step_list > li { border-top: 1px solid #000; padding: 10px 0 0; list-style-type: none !important; }
         #lge_story_use_guide .lge_story_step_list > li + li { margin-top: 40px; }
         #lge_story_use_guide .lge_story_step_tit { display: flex; justify-content: flex-start; align-items: stretch; gap: 4px; }
+
+
+        /* 사용가이드 W18 */
+        
+
+
 /* 사용자가이드 // */
