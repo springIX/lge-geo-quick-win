@@ -45,6 +45,7 @@
       .lge_story_container #tt-body-page ,
       .lge_story_container figure.imageblock { display: block; }
       #article-view .lge_story_container [data-ke-size] { line-height: inherit; }
+      /* .lge_story_container + [data-ke-type="source"] { display: none !important; } */
 
   /* 
       tstory mobile css custom 
@@ -60,9 +61,9 @@
       .lge_story_container figure figcaption { text-align: left; color: #000; }
       .lge_story_container figure.imageblock.alignCenter { margin: 0; }
 
-      .blogview_content .lge_story_container ul li,
-      .blogview_content .lge_story_container ol li { font-size: inherit; }
-      .blogview_content .lge_story_container ol:not([data-ke-list-type]) li:before {
+      .blogview_content ul li,
+      .blogview_content ol li { font-size: inherit; }
+      .blogview_content ol:not([data-ke-list-type]) li:before {
           content: inherit;
           position: relative;
           width: auto;
@@ -72,7 +73,7 @@
           left: inherit;
           top: inherit;
       }
-      .blogview_content .lge_story_container ul:not([data-ke-list-type]) li:before { 
+      .blogview_content ul:not([data-ke-list-type]) li:before { 
           content: inherit;
           position: relative;
           width: auto;
@@ -82,17 +83,60 @@
           left: inherit;
           top: inherit;
       }
-      .blogview_content .lge_story_container ul:not([data-ke-list-type]) li, 
-      .blogview_content .lge_story_container ol:not([data-ke-list-type]) li {
+      .blogview_content ul:not([data-ke-list-type]) li, 
+      .blogview_content ol:not([data-ke-list-type]) li {
           position: relative;
           padding: inherit !important;
-          margin-top: 0;
-          margin-bottom: 0;
+          margin-top: inherit !important;
+          margin-bottom: inherit !important;
           line-height: inherit !important;
           color: inherit;
           list-style-type: none !important;
           font-size: inherit;
       }
+
+      .blogview_content ol li p, 
+      .blogview_content ol li div, 
+      .blogview_content ul li p, 
+      .blogview_content ul li div { display: block; }
+      .blogview_content.useless_p_margin p { margin: 0; }
+
+      /* font size */
+        .blogview_content .lge_story_container .font_black { font-weight: 900 !important; } /* 매우 굵은 텍스트 스타일 */
+        .blogview_content .lge_story_container .font_extrabold { font-weight: 800 !important; } /* 좀 더 굵은 텍스트 스타일 */
+        .blogview_content .lge_story_container .font_bold { font-weight: bold !important; } /* 굵은 텍스트 스타일 */
+        .blogview_content .lge_story_container .font_semibold { font-weight: 600 !important; } /* 약간 굵은 텍스트 스타일 */
+        .blogview_content .lge_story_container .font_medium { font-weight: 500 !important; }
+        .blogview_content .lge_story_container .font_12 { font-size: 12px !important; }
+        .blogview_content .lge_story_container .font_14 { font-size: 14px !important; }
+        .blogview_content .lge_story_container .font_16 { font-size: 16px !important; }
+        .blogview_content .lge_story_container .font_18 { font-size: 18px !important; }
+        .blogview_content .lge_story_container .font_20 { font-size: 20px !important; }
+        .blogview_content .lge_story_container .font_24 { font-size: 24px !important; }
+        .blogview_content .lge_story_container .font_28 { font-size: 28px !important; }
+        .blogview_content .lge_story_container .font_30 { font-size: 30px !important; }
+        .blogview_content .lge_story_container .font_32 { font-size: 32px !important; }
+        .blogview_content .lge_story_container .font_36 { font-size: 36px !important; }
+        .blogview_content .lge_story_container .font_40 { font-size: 40px !important; }
+
+        /* margin */
+        .blogview_content .lge_story_container .mt2 { margin-top: 2px !important; }
+        .blogview_content .lge_story_container .mt4 { margin-top: 4px !important; }
+        .blogview_content .lge_story_container .mt10 { margin-top: 10px !important; }
+        .blogview_content .lge_story_container .mt12 { margin-top: 12px !important; }
+        .blogview_content .lge_story_container .mt20 { margin-top: 20px !important; }
+        .blogview_content .lge_story_container .mt30 { margin-top: 30px !important; }
+        .blogview_content .lge_story_container .mt32 { margin-top: 32px !important; }
+        .blogview_content .lge_story_container .mt40 { margin-top: 40px !important; }
+        .blogview_content .lge_story_container .mt50 { margin-top: 50px !important; }
+        .blogview_content .lge_story_container .mt60 { margin-top: 60px !important; }
+        .blogview_content .lge_story_container .mt70 { margin-top: 70px !important; }
+        .blogview_content .lge_story_container .mt72 { margin-top: 72px !important; }
+        .blogview_content .lge_story_container .mt80 { margin-top: 80px !important; }
+        .blogview_content .lge_story_container .mt90 { margin-top: 90px !important; }
+        .blogview_content .lge_story_container .mt100 { margin-top: 100px !important; }
+        .blogview_content .lge_story_container .mt110 { margin-top: 110px !important; }
+        .blogview_content .lge_story_container .mt120 { margin-top: 120px !important; }
 
   /*  core */
     /*  
@@ -132,10 +176,14 @@
         .lge_story_container .link_text { display: inline-block; color: var(--link-text-color) !important; font-size: 16px; font-weight: 700; line-height: 1.6; letter-spacing: -0.01em; text-decoration: underline; text-underline-offset: 2px; } /* 링크 텍스트 스타일 */
         
         /* font size */
+        .lge_story_container .font_black { font-weight: 900 !important; } /* 매우 굵은 텍스트 스타일 */
+        .lge_story_container .font_extrabold { font-weight: 800 !important; } /* 좀 더 굵은 텍스트 스타일 */
         .lge_story_container .font_bold { font-weight: bold !important; } /* 굵은 텍스트 스타일 */
         .lge_story_container .font_semibold { font-weight: 600 !important; } /* 약간 굵은 텍스트 스타일 */
+        .lge_story_container .font_medium { font-weight: 500 !important; } /* 굵은 텍스트 스타일 */
         .lge_story_container .font_12 { font-size: 12px !important; }
         .lge_story_container .font_14 { font-size: 14px !important; }
+        .lge_story_container .font_16 { font-size: 16px !important; }
         .lge_story_container .font_18 { font-size: 18px !important; }
         .lge_story_container .font_20 { font-size: 20px !important; }
         .lge_story_container .font_24 { font-size: 24px !important; }
@@ -214,7 +262,8 @@
         /* container header  */
         .lge_story_container .lge_story_header { }
         .lge_story_container .lge_story_header_title { font-size: 40px; font-weight: 700; line-height: 1.4; word-break: keep-all; }
-        .lge_story_container .lge_story_header_subtitle { font-size: 26px; line-height: 1.4; letter-spacing: -0.01em; margin-top: 20px; word-break: keep-all; }
+        .lge_story_container .lge_story_header_subtitle { margin-top: 20px; word-break: keep-all; }
+        .lge_story_container .lge_story_header_subtitle p { font-size: 26px; line-height: 1.4; letter-spacing: -0.01em;  }
 
         /* content  */
         /* .lge_story_section  + .lge_story_section { margin-top: 100px; } */
@@ -224,7 +273,8 @@
         .lge_story_container .lge_story_row_body + .lge_story_row_body { margin-top: 80px; padding-top: 80px; border-top: 1px solid var(--border-color); }
 
         .lge_story_container .lge_story_row_title { font-size: 36px; font-weight: 700; line-height: 1.4; }
-        .lge_story_container .lge_story_row_subtitle { font-size: 20px; font-weight: 400; line-height: 1.4; letter-spacing: -0.01em; margin-top: 50px; }
+        .lge_story_container .lge_story_row_subtitle { margin-top: 50px; }
+        .lge_story_container .lge_story_row_subtitle p { font-size: 20px; font-weight: 400; line-height: 1.4; letter-spacing: -0.01em;  }
         .lge_story_container .lge_story_row_subtitle:first-child { margin-top: 0; }
         .lge_story_container .lge_story_row_tag { font-size: 16px; font-weight: 400; line-height: 1.4; letter-spacing: -0.01em; margin-top: 10px; }
         .lge_story_container .lge_story_row_desc { }
@@ -280,6 +330,7 @@
         .lge_story_container .lge_story_section_branch { border-top: 1px solid var(--border-color); margin-top: 120px; padding-top: 120px; }
 
         /* tips */
+        .lge_story_container .lge_story_list_tip_title { font-size: 32px; font-weight: 700; line-height: 1.4; word-break: keep-all; }
         .lge_story_container .lge_story_list_tip { }
         .lge_story_container .lge_story_list_tip li { list-style-type: none !important; }
         .lge_story_container .lge_story_list_tip b { display: block; font-size: 32px; font-weight: 700; line-height: 1.4; }
@@ -313,6 +364,20 @@
         #lge_story_buy_guide .lge_story_table_specs tbody td span:not(:first-child), 
         #lge_story_buy_guide .lge_story_table_specs tbody td span:not(:first-child) { margin-top: 4px; }
         #lge_story_buy_guide .lge_story_list_tip li + li { margin-top: 80px !important; }
+
+        /* mobile font guide */
+        @media(max-width:768px){
+            #lge_story_buy_guide .lge_story_header_title { font-size: 32px; }
+            #lge_story_buy_guide .lge_story_header_subtitle p { font-size: 20px; }
+            #lge_story_buy_guide .lge_story_content_title { font-size: 24px; }
+            #lge_story_buy_guide .lge_story_table th b { font-size: 20px; }
+            #lge_story_buy_guide .lge_story_figure_caption b { font-size: 24px; }
+            #lge_story_buy_guide .lge_story_row_subtitle p { font-size: 18px; }
+            #lge_story_buy_guide .lge_story_row_title { font-size: 28px; }
+            #lge_story_buy_guide .lge_story_list_tip_title { font-size: 32px; }
+            #lge_story_buy_guide .lge_story_list_tip_title br { display: none; }
+            #lge_story_buy_guide .lge_story_list_tip b { font-size: 24px; }
+        }
 /*  구매가이드 // */
 
   /* 사용자가이드 */
@@ -325,8 +390,11 @@
         #lge_story_use_guide .lge_stroy_breadcrumb { display: flex; justify-content: flex-start; align-items: stretch; flex-wrap: wrap; }
         #lge_story_use_guide .lge_stroy_breadcrumb > li { display: flex; justify-content: flex-start; align-items: stretch; }
         #lge_story_use_guide .lge_stroy_breadcrumb > li:not(:first-child):before { content: ""; width: 1px; height: 12px; margin: auto 10px; background-color: currentColor; }
-        #lge_story_use_guide .lge_story_summary { padding: 20px; border-radius: 8px; border: 1px solid var(--highlight); background-color: var(--highlight-bg); overflow: hidden; }
-        #lge_story_use_guide .lge_story_summary p { color: inherit; }
+        #lge_story_use_guide .lge_story_summary { border: 1px solid #CECECE; border-radius: 16px; overflow: hidden; }
+        #lge_story_use_guide .lge_story_summary_head { background-color: #363636; padding: 12px 40px; }
+        #lge_story_use_guide .lge_story_summary_head p { line-height: 1.6; color: #fff; }
+        #lge_story_use_guide .lge_story_summary_body { padding: 32px 40px; }
+        #lge_story_use_guide .lge_story_summary_body * { color: #737373; }
 
         /* description */
         #lge_story_use_guide .lge_story_desc { }
@@ -337,13 +405,14 @@
         #lge_story_use_guide .list_used_disc > li p { line-height: inherit; }
 
         #lge_story_use_guide .lge_story_step_list {  }
-        #lge_story_use_guide .lge_story_step_list > li { border-top: 1px solid #000; padding: 10px 0 0; list-style-type: none !important; }
-        #lge_story_use_guide .lge_story_step_list > li + li { margin-top: 40px; }
+        #lge_story_use_guide .lge_story_step_list > li { border-top: 1px solid #000; padding: 10px 0 0 !important; list-style-type: none !important; }
+        #lge_story_use_guide .lge_story_step_list > li + li { margin-top: 40px !important; }
         #lge_story_use_guide .lge_story_step_tit { display: flex; justify-content: flex-start; align-items: stretch; gap: 4px; }
+        #lge_story_use_guide .lge_story_step_tit span { flex-shrink: 0; }
 
+        /* mobile font guide */
+        @media(max-width:768px){
 
+        }
         /* 사용가이드 W18 */
-        
-
-
 /* 사용자가이드 // */

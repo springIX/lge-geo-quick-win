@@ -1,7 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/custom_style.css">
     <title>사용가이드</title>
 </head>
 <body>
@@ -11,9 +12,14 @@
         <!-- content header -->
         <header class="lge_story_hero_header">
             <div class="lge_story_summary">
-                <p class="highlight font_24">
-                    냉장고/김치냉장고 Fit&Max 2대 페어 설치 전 필요한 공간 조건과 상세 방법을 안내하는 가이드 페이지입니다. 설치 공간 치수 및 여유 간격, 도어 개방 기준, 제품 유형별 설치 방식, 페어설치키트, 설치 과정 및 유의사항 등 설치 환경에 반드시 확인해야 할 항목을 중심으로 필요한 정보를 빠르게 확인할 수 있습니다.
-                </p>
+                <div class="lge_story_summary_head">
+                    <p class="font_16 font_extrabold">SUMMARY</p>
+                </div>
+                <div class="lge_story_summary_body">
+                    <p class="highlight font_20 font_medium">
+                        <storng class="font_bold">냉장고/김치냉장고 Fit&Max 2대</storng> 페어 설치 전 필요한 공간 조건과 상세 방법을 안내하는 가이드 페이지입니다. 설치 공간 치수 및 여유 간격, 도어 개방 기준, 제품 유형별 설치 방식, 페어설치키트, 설치 과정 및 유의사항 등 설치 환경에 반드시 확인해야 할 항목을 중심으로 필요한 정보를 빠르게 확인할 수 있습니다.
+                    </p>
+                </div>
             </div>
         </header>
         <!-- content header // -->
@@ -151,11 +157,11 @@
             <ul class="list_ul">
                 <li class="mt40">
                     <b class="font_20 font_bold">코드제로 M9에서 냄새가 난다면?</b>
-                    <a href="https://www.lge.co.kr/story/user-guide/thinq-discover-cleaning-003" class="link_text font_16 mt10">LG 코드제로 M9</a>
+                    <a href="https://www.lge.co.kr/story/user-guide/thinq-discover-cleaning-005" class="link_text font_16 mt10">LG 코드제로 M9</a>
                 </li>
                 <li class="mt40">
                     <b class="font_20 font_bold">청소 로봇으로 닦기 전 준비하세요</b>
-                    <a href="https://www.lge.co.kr/story/user-guide/thinq-discover-cleaning-007" class="link_text font_16 mt10">LG 코드제로 R5</a>
+                    <a href="https://www.lge.co.kr/story/user-guide/thinq-discover-cleaning-006" class="link_text font_16 mt10">LG 코드제로 R5</a>
                 </li>
                 <li class="mt40">
                     <b class="font_20 font_bold">코드제로 R9 필터 청소는 이렇게</b>
@@ -171,6 +177,104 @@
         </article>
         <!-- time stamp //-->
     </div>
+    <script>
+            /*
+                * Tistory mobile page CSS loader
+                *
+                * Usage:
+                * 1. Upload `css/custom_style.css` to a publicly accessible URL.
+                * 2. Replace `CUSTOM_CSS_URL` below with that absolute URL.
+                * 3. Paste this script into the Tistory mobile/skin script area or the post HTML.
+            */
+            (function () {
+            "use strict";
+                                    
+            var CUSTOM_CSS_URL = "https://tistory1.daumcdn.net/tistory/8636211/skin/images/custom_style.css";
+            var LINK_ID = "lge-story-custom-style";
+            var MAX_RETRY = 20;
+            var retryCount = 0;
+
+            if (!CUSTOM_CSS_URL || CUSTOM_CSS_URL.indexOf("./images/custom_style.css") === 0) {
+                console.warn("[lge-story] CUSTOM_CSS_URL 값을 실제 CSS 주소로 바꿔야 합니다.");
+                return;
+            }
+
+            function createLink() {
+                var link = document.createElement("link");
+                link.id = LINK_ID;
+                link.rel = "stylesheet";
+                link.type = "text/css";
+                link.href = CUSTOM_CSS_URL;
+                link.media = "all";
+                return link;
+            }
+
+            function ensureCssLoaded() {
+                var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
+                if (!head) {
+                return false;
+                }
+
+                var current = document.getElementById(LINK_ID);
+                if (current) {
+                if (current.href !== CUSTOM_CSS_URL) {
+                    current.href = CUSTOM_CSS_URL;
+                }
+                return true;
+                }
+
+                head.appendChild(createLink());
+                return true;
+            }
+
+            function retryUntilLoaded() {
+                if (ensureCssLoaded()) {
+                return;
+                }
+
+                retryCount += 1;
+                if (retryCount >= MAX_RETRY) {
+                console.warn("[lge-story] custom CSS를 head에 주입하지 못했습니다.");
+                return;
+                }
+
+                window.setTimeout(retryUntilLoaded, 300);
+            }
+
+            function watchDom() {
+                if (!window.MutationObserver) {
+                return;
+                }
+
+                var observer = new MutationObserver(function () {
+                ensureCssLoaded();
+                });
+
+                observer.observe(document.documentElement, {
+                childList: true,
+                subtree: true,
+                });
+            }
+
+            function init() {
+                retryUntilLoaded();
+                watchDom();
+            }
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", init, { once: true });
+            } else {
+                init();
+            }
+
+            window.addEventListener("pageshow", ensureCssLoaded);
+            document.addEventListener("visibilitychange", function () {
+                if (!document.hidden) {
+                ensureCssLoaded();
+                }
+            });
+            })();
+    </script>
     <!-- container // -->
 
     <!-- 

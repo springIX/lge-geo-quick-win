@@ -1,7 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/custom_style.css">
     <title>사용가이드</title>
 </head>
 <body>
@@ -72,6 +73,104 @@
         </article>
         <!-- time stamp //-->
     </div>
+<script>
+            /*
+                * Tistory mobile page CSS loader
+                *
+                * Usage:
+                * 1. Upload `css/custom_style.css` to a publicly accessible URL.
+                * 2. Replace `CUSTOM_CSS_URL` below with that absolute URL.
+                * 3. Paste this script into the Tistory mobile/skin script area or the post HTML.
+            */
+            (function () {
+            "use strict";
+                                    
+            var CUSTOM_CSS_URL = "https://tistory1.daumcdn.net/tistory/8636211/skin/images/custom_style.css";
+            var LINK_ID = "lge-story-custom-style";
+            var MAX_RETRY = 20;
+            var retryCount = 0;
+
+            if (!CUSTOM_CSS_URL || CUSTOM_CSS_URL.indexOf("./images/custom_style.css") === 0) {
+                console.warn("[lge-story] CUSTOM_CSS_URL 값을 실제 CSS 주소로 바꿔야 합니다.");
+                return;
+            }
+
+            function createLink() {
+                var link = document.createElement("link");
+                link.id = LINK_ID;
+                link.rel = "stylesheet";
+                link.type = "text/css";
+                link.href = CUSTOM_CSS_URL;
+                link.media = "all";
+                return link;
+            }
+
+            function ensureCssLoaded() {
+                var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
+                if (!head) {
+                return false;
+                }
+
+                var current = document.getElementById(LINK_ID);
+                if (current) {
+                if (current.href !== CUSTOM_CSS_URL) {
+                    current.href = CUSTOM_CSS_URL;
+                }
+                return true;
+                }
+
+                head.appendChild(createLink());
+                return true;
+            }
+
+            function retryUntilLoaded() {
+                if (ensureCssLoaded()) {
+                return;
+                }
+
+                retryCount += 1;
+                if (retryCount >= MAX_RETRY) {
+                console.warn("[lge-story] custom CSS를 head에 주입하지 못했습니다.");
+                return;
+                }
+
+                window.setTimeout(retryUntilLoaded, 300);
+            }
+
+            function watchDom() {
+                if (!window.MutationObserver) {
+                return;
+                }
+
+                var observer = new MutationObserver(function () {
+                ensureCssLoaded();
+                });
+
+                observer.observe(document.documentElement, {
+                childList: true,
+                subtree: true,
+                });
+            }
+
+            function init() {
+                retryUntilLoaded();
+                watchDom();
+            }
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", init, { once: true });
+            } else {
+                init();
+            }
+
+            window.addEventListener("pageshow", ensureCssLoaded);
+            document.addEventListener("visibilitychange", function () {
+                if (!document.hidden) {
+                ensureCssLoaded();
+                }
+            });
+            })();
+    </script>
     <!-- container // -->
 
     <!-- 
