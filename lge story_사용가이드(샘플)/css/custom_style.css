@@ -24,82 +24,82 @@
       --point-color-light: #EBF6F1; /* 연한 포인트 색상 */
       --border-color: #ddd; /* 테두리 색상 */
   }
-   /* tstory css custom */
-      .main { max-width: 1080px; }
-      .area-main { max-width: var(--lge-container-width); }
-      .article-view * { color: inherit; }
-      #article-view { padding: 0; }
-      .article-view ul li,
-      #article-view figure figcaption { color: #000; }
-      #article-view ul, 
-      #article-view ol { margin: 0; padding: 0; }
-      #article-view ul li, 
-      #article-view ol li { margin: 0; font-size: inherit; }
-      #article-view table td { padding: inherit; }
-      #article-view .lge_story_table td { padding: 14px 5px; }
-      #article-view .lge_story_table_specs td { padding: 2px 8px; vertical-align: middle; }
-      #article-view figure figcaption { text-align: left; }
-      #article-view figure.imageblock.alignCenter { margin: 0; }
-      #article-view p { line-height: 1.4; }
-      .lge_story_container figure.imageblock, 
-      .lge_story_container #tt-body-page ,
-      .lge_story_container figure.imageblock { display: block; }
-      #article-view .lge_story_container [data-ke-size] { line-height: inherit; }
-      /* .lge_story_container + [data-ke-type="source"] { display: none !important; } */
+    /* tstory css custom */
+        .main { max-width: 1080px; }
+        .area-main { max-width: var(--lge-container-width); }
+        .article-view * { color: inherit; }
+        #article-view { padding: 0; }
+        .article-view ul li,
+        #article-view figure figcaption { color: #000; }
+        #article-view ul, 
+        #article-view ol { margin: 0; padding: 0; }
+        #article-view ul li, 
+        #article-view ol li { margin: 0; font-size: inherit; }
+        #article-view table td { padding: inherit; }
+        #article-view .lge_story_table td { padding: 14px 5px; }
+        #article-view .lge_story_table_specs td { padding: 2px 8px; vertical-align: middle; }
+        #article-view figure figcaption { text-align: left; }
+        #article-view figure.imageblock.alignCenter { margin: 0; }
+        #article-view p { line-height: 1.4; }
+        .lge_story_container figure.imageblock, 
+        .lge_story_container #tt-body-page ,
+        .lge_story_container figure.imageblock { display: block; }
+        #article-view .lge_story_container [data-ke-size] { line-height: inherit; }
+        /* .lge_story_container + [data-ke-type="source"] { display: none !important; } */
 
-  /* 
-      tstory mobile css custom 
-      최초 접속경로가 mobile device 일때 참조되는 속성.
-  */ 
-      .lge_story_container ul, 
-      .lge_story_container ol { margin: 0; padding: 0; }
-      .lge_story_container ul li, 
-      .lge_story_container ol li { margin: 0; font-size: inherit; }
-      .lge_story_container table td { padding: inherit; }
-      .lge_story_container .lge_story_table td { padding: 14px 5px; }
-      .lge_story_container .lge_story_table_specs td { padding: 2px 8px; vertical-align: middle; }
-      .lge_story_container figure figcaption { text-align: left; color: #000; }
-      .lge_story_container figure.imageblock.alignCenter { margin: 0; }
+        /* 
+            tstory mobile css custom 
+            최초 접속경로가 mobile device 일때 참조되는 속성.
+        */ 
+        .lge_story_container ul, 
+        .lge_story_container ol { margin: 0; padding: 0; }
+        .lge_story_container ul li, 
+        .lge_story_container ol li { margin: 0; font-size: inherit; }
+        .lge_story_container table td { padding: inherit; }
+        .lge_story_container .lge_story_table td { padding: 14px 5px; }
+        .lge_story_container .lge_story_table_specs td { padding: 2px 8px; vertical-align: middle; }
+        .lge_story_container figure figcaption { text-align: left; color: #000; }
+        .lge_story_container figure.imageblock.alignCenter { margin: 0; }
 
-      .blogview_content ul li,
-      .blogview_content ol li { font-size: inherit; }
-      .blogview_content ol:not([data-ke-list-type]) li:before {
-          content: inherit;
-          position: relative;
-          width: auto;
-          height: auto;
-          border-radius: 0;
-          background: transparent;
-          left: inherit;
-          top: inherit;
-      }
-      .blogview_content ul:not([data-ke-list-type]) li:before { 
-          content: inherit;
-          position: relative;
-          width: auto;
-          height: auto;
-          border-radius: 0;
-          background: transparent;
-          left: inherit;
-          top: inherit;
-      }
-      .blogview_content ul:not([data-ke-list-type]) li, 
-      .blogview_content ol:not([data-ke-list-type]) li {
-          position: relative;
-          padding: inherit !important;
-          margin-top: inherit !important;
-          margin-bottom: inherit !important;
-          line-height: inherit !important;
-          color: inherit;
-          list-style-type: none !important;
-          font-size: inherit;
-      }
+        .blogview_content ul li,
+        .blogview_content ol li { font-size: inherit; }
+        .blogview_content ol:not([data-ke-list-type]) li:before {
+        content: inherit;
+        position: relative;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background: transparent;
+        left: inherit;
+        top: inherit;
+        }
+        .blogview_content ul:not([data-ke-list-type]) li:before { 
+        content: inherit;
+        position: relative;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background: transparent;
+        left: inherit;
+        top: inherit;
+        }
+        .blogview_content ul:not([data-ke-list-type]) li, 
+        .blogview_content ol:not([data-ke-list-type]) li {
+        position: relative;
+        padding: inherit !important;
+        margin-top: inherit !important;
+        margin-bottom: inherit !important;
+        line-height: inherit !important;
+        color: inherit;
+        list-style-type: none !important;
+        font-size: inherit;
+        }
 
-      .blogview_content ol li p, 
-      .blogview_content ol li div, 
-      .blogview_content ul li p, 
-      .blogview_content ul li div { display: block; }
-      .blogview_content.useless_p_margin p { margin: 0; }
+        .blogview_content ol li p, 
+        .blogview_content ol li div, 
+        .blogview_content ul li p, 
+        .blogview_content ul li div { display: block; }
+        .blogview_content.useless_p_margin p { margin: 0; }
 
       /* font size */
         .blogview_content .lge_story_container .font_black { font-weight: 900 !important; } /* 매우 굵은 텍스트 스타일 */
