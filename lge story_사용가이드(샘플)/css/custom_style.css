@@ -357,6 +357,8 @@
         .lge_story_container .lge_story_summary_head p { line-height: 1.6; color: #fff; }
         .lge_story_container .lge_story_summary_body { padding: 32px 40px; }
         .lge_story_container .lge_story_summary_body * { color: #737373; font-size: 20px !important; font-weight: 500; line-height: 1.6; }
+        .lge_story_container .lge_story_summary_body b,
+        .lge_story_container .lge_story_summary_body span { display: inline !important; }
 
 
         /* mobile font guide */
