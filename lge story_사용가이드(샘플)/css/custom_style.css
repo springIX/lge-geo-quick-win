@@ -45,12 +45,14 @@
         .lge_story_container #tt-body-page ,
         .lge_story_container figure.imageblock { display: block; }
         #article-view .lge_story_container [data-ke-size] { line-height: inherit; }
+        #article-view .lge_story_container h3 { margin: inherit; padding: 0 !important; font-weight: 700 !important; }
         /* .lge_story_container + [data-ke-type="source"] { display: none !important; } */
 
         /* 
             tstory mobile css custom 
             최초 접속경로가 mobile device 일때 참조되는 속성.
         */ 
+        .blogview_content .lge_story_container h3 { margin: inherit; padding: 0 !important; }
         .lge_story_container ul, 
         .lge_story_container ol { margin: 0; padding: 0; }
         .lge_story_container ul li, 
@@ -333,7 +335,7 @@
         .lge_story_container .lge_story_list_tip_title { font-size: 32px; font-weight: 700; line-height: 1.4; word-break: keep-all; }
         .lge_story_container .lge_story_list_tip { }
         .lge_story_container .lge_story_list_tip li { list-style-type: none !important; }
-        .lge_story_container .lge_story_list_tip b { display: block; font-size: 32px; font-weight: 700; line-height: 1.4; }
+        .lge_story_container .lge_story_list_tip h3 { display: block; font-size: 32px; font-weight: 700; line-height: 1.4; }
         .lge_story_container .lge_story_list_tip span { display: block; font-size: 20px; font-weight: 400; line-height: 1.4; letter-spacing: -0.01em; margin-top: 20px }
         .lge_story_container .lge_story_list_tip a { display: inline-block; margin-top: 10px; margin-right: 20px; font-size: 16px; font-weight: 700; line-height: 1.4; letter-spacing: -0.01em; }
 
@@ -344,7 +346,7 @@
 
         /* page index list */
         .lge_story_container .lge_story_index { }
-        .lge_story_container .lge_story_index_title b { font-size: 32px; }
+        .lge_story_container .lge_story_index_title h3 { font-size: 32px; }
         .lge_story_container .lge_story_index_content > li { counter-increment: list-counter; display: flex; align-items: baseline; gap:0.1em; }
         .lge_story_container .lge_story_index_content > li::before { content: counter(list-counter) ". " !important; flex-shrink: 0; min-width: 1em; font-size: inherit !important; text-align: left; padding: 0; }
         .lge_story_container .lge_story_index_content > li,
@@ -354,7 +356,7 @@
         /* summary */
         .lge_story_container .lge_story_summary { border: 1px solid #CECECE; border-radius: 16px; overflow: hidden; }
         .lge_story_container .lge_story_summary_head { background-color: #363636; padding: 12px 40px; }
-        .lge_story_container .lge_story_summary_head p { line-height: 1.6; color: #fff; }
+        .lge_story_container .lge_story_summary_head h3 { line-height: 1.6; color: #fff !important; }
         .lge_story_container .lge_story_summary_body { padding: 32px 40px; }
         .lge_story_container .lge_story_summary_body * { color: #737373; font-size: 20px !important; font-weight: 500; line-height: 1.6; }
         .lge_story_container .lge_story_summary_body b,
@@ -371,7 +373,7 @@
             .lge_story_container .lge_story_summary_body * { font-size: 18px !important; }
 
             /* page index list */
-            .lge_story_container .lge_story_index_title b { font-size: 24px; }
+            .lge_story_container .lge_story_index_title h3 { font-size: 24px; }
             .lge_story_container .lge_story_index_content > li, 
             .lge_story_container .lge_story_index_content > li p { font-size: 16px !important; }
         }
@@ -409,7 +411,7 @@
             #lge_story_buy_guide .lge_story_row_title { font-size: 28px; }
             #lge_story_buy_guide .lge_story_list_tip_title { font-size: 32px; }
             #lge_story_buy_guide .lge_story_list_tip_title br { display: none; }
-            #lge_story_buy_guide .lge_story_list_tip b { font-size: 24px; }
+            #lge_story_buy_guide .lge_story_list_tip h3 { font-size: 24px; }
 
             #lge_story_buy_guide .lge_story_index_content > li,
             #lge_story_buy_guide .lge_story_index_content > li p { font-size: 16px !important; }
@@ -440,19 +442,27 @@
         #lge_story_use_guide .lge_story_step_list > li + li { margin-top: 40px !important; }
         #lge_story_use_guide .lge_story_step_tit { display: flex; justify-content: flex-start; align-items: stretch; gap: 4px; }
         #lge_story_use_guide .lge_story_step_tit span { flex-shrink: 0; }
+        #lge_story_use_guide .lge_story_step_tit h3 { font-size: inherit; }
 
         /* mobile font guide */
         @media(max-width:768px){
-            #lge_story_use_guide b.font_20 { font-size: 18px !important; }
+            
+
+            #lge_story_use_guide b.font_20,
+            #lge_story_use_guide h3.font_20 { font-size: 18px !important; }
 
             #lge_story_use_guide .lge_story_step_tit.font_24,
-            #lge_story_use_guide b.font_24 { font-size: 20px !important; }
+            #lge_story_use_guide b.font_24,
+            #lge_story_use_guide h3.font_24 { font-size: 20px !important; }
 
-            #lge_story_use_guide b.font_32 { font-size: 24px !important; }
+            #lge_story_use_guide b.font_32,
+            #lge_story_use_guide h3.font_32 { font-size: 24px !important; }
 
-            #lge_story_use_guide b.font_36 { font-size: 28px !important; }
+            #lge_story_use_guide b.font_36,
+            #lge_story_use_guide h3.font_36 { font-size: 28px !important; }
 
-            #lge_story_use_guide b.font_40 { font-size: 32px !important; }
+            #lge_story_use_guide b.font_40,
+            #lge_story_use_guide h3.font_40 { font-size: 32px !important; }
 
             #lge_story_use_guide .lge_story_use_footer > b:first-child br { display: none; }
             
