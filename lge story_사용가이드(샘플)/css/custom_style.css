@@ -342,7 +342,7 @@
         /*  video  */
         .lge_story_container .lge_story_video_area { padding: 0 20px; overflow: hidden; }
         .lge_story_container .lge_story_video_area iframe { width: 100%; height: auto; aspect-ratio: 1.78/1; }
-        .lge_story_container .lge_story_video_timeline li {  list-style-type: none !important; }
+        .lge_story_container .lge_story_video_timeline li {  list-style-type: none !important; line-height: 1.5; }
 
         /* page index list */
         .lge_story_container .lge_story_index { }
