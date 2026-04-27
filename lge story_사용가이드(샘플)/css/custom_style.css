@@ -459,10 +459,10 @@
             #lge_story_use_guide b.font_20,
             #lge_story_use_guide h3.font_20 { font-size: 18px !important; }
 
-            #lge_story_use_guide .lge_story_step_tit.font_24,
+            #lge_story_use_guide .lge_story_step_tit,
+            #lge_story_use_guide .lge_story_step_tit span.font_24,
             #lge_story_use_guide b.font_24,
-            #lge_story_use_guide h3.font_24,
-            #lge_story_use_guide span.font_24 { font-size: 20px !important; }
+            #lge_story_use_guide h3.font_24 { font-size: 20px !important; }
 
             #lge_story_use_guide b.font_32,
             #lge_story_use_guide h3.font_32 { font-size: 24px !important; }
