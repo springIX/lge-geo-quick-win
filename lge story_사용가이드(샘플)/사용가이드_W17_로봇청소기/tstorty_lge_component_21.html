@@ -17,7 +17,9 @@
                 </div>
                 <div class="lge_story_summary_body">
                     <p class="highlight font_20 font_medium">
-                        <b class="font_bold">냉장고/김치냉장고 Fit&amp;Max 2대 </b>페어 설치 전 필요한 공간 조건과 상세 방법을 안내하는 가이드 페이지입니다. 설치 공간 치수 및 여유 간격, 도어 개방 기준, 제품 유형별 설치 방식, 페어설치키트, 설치 과정 및 유의사항 등 설치 환경에 반드시 확인해야 할 항목을 중심으로 필요한 정보를 빠르게 확인할 수 있습니다.
+                        <b class="font_bold">LG 청소로봇 코드제로 R5의 기본 사용 방법</b>을 정리한 사용자 가이드 콘텐츠입니다.
+                        <b class="font_bold">충전대 설치 및 충전, 전원 켜기, ThinQ 앱 연결, 물걸레 청소 준비 및 상태 확인 방법 </b>등
+                        <b class="font_bold"> 실 사용 과정에서 필요한 기능과 활용 방법</b>을 중심으로 필요한 정보를 빠르게 확인할 수 있습니다.
                     </p>
                 </div>
             </div>
@@ -28,16 +30,22 @@
                 <div class="mt10">
                     <ol class="lge_story_index_content">
                         <li>
-                            <p>물걸레 패드 장착 상태 확인</p>
+                            <p>충전대 설치 및 충전 방법</p>
                         </li>
                         <li>
-                            <p>걸레판 고정 나사 점검</p>
+                            <p>전원 켜기 및 기본 작동 방법</p>
                         </li>
                         <li>
-                            <p>물통 급수 및 급수 상태 확인</p>
+                            <p>ThinQ 앱 연결 및 초기 설정</p>
                         </li>
                         <li>
-                            <p>바닥 결 방향에 맞춘 청소 방법</p>
+                            <p>청소 준비 및 상태 확인 방법</p>
+                        </li>
+                        <li>
+                            <p>청소 시작 및 기본 사용 방법</p>
+                        </li>
+                        <li>
+                            <p>앱 기반 기능 활용 방법</p>
                         </li>
                     </ol>
                 </div>
@@ -73,32 +81,25 @@
             <b class="font_24 font_bold">R5 사용법 자세히 알아보기</b>
             <div class="mt20">
                 <b class="font_20 font_bold">제품 사용 방법</b>
-                <p class="font_16 mt10">
-                    00:15 충전대 설치 및 충전하기
-                    <br>
-                    01:40 사용 전 주의사항
-                    <br>
-                    02:04 전원 켜기
-                    <br>
-                    02:36 충전하기
-                    <br>
-                    02:56 ThinQ 앱 연결하기
-                    <br>
-                    03:07 버튼 색상으로 청소기 상태 알아보기
-                    <br>
-                    03:47 물걸레 청소를 위해 준비하기
-                    <br>
-                    04:48 ThinQ 앱의 다양한 기능 알아보기
-                </p>
+                <ol class="lge_story_video_timeline mt10 font_16">
+                    <li>00:15 충전대 설치 및 충전하기​</li>
+                    <li>01:40 사용 전 주의사항</li>
+                    <li>02:04 전원 켜기</li>
+                    <li>02:36 충전하기​</li>
+                    <li>02:56 ThinQ 앱 연결하기</li>
+                    <li>03:07 버튼 색상으로 청소기 상태 알아보기</li>
+                    <li>03:47 물걸레 청소를 위해 준비하기​</li>
+                    <li>04:48 ThinQ 앱의 다양한 기능 알아보기</li>
+                </ol>
             </div>
             <div class="link_text_group mt80">
                 <a href="https://www.lge.co.kr/category/care-accessories/robotic-vacuum-cleaner" class="link_text">LG 코드제로 R5 보러가기</a>
                 <a href="https://www.lge.co.kr/category/vacuum-cleaners?subCateId=CT50000119" class="link_text">청소 로봇 소모품 보러가기</a>
             </div>
             <div class="link_text_group">
-                <a href="" class="link_text">구매가이드 전체보기</a>
-                <a href="" class="link_text">설치가이드 전체보기</a>
-                <a href="" class="link_text">사용가이드 전체보기</a>
+                <a href="https://www.lge.co.kr/story/buying-guide" class="link_text">구매가이드 전체보기</a>
+                <a href="https://www.lge.co.kr/story/setup-guide" class="link_text">설치가이드 전체보기</a>
+                <a href="https://www.lge.co.kr/story/user-guide" class="link_text">사용가이드 전체보기</a>
             </div>
         </section>
         <!-- content footer // -->
@@ -109,7 +110,104 @@
         </article>
         <!-- time stamp //-->
     </div>
-    
+    <script>
+            /*
+                * Tistory mobile page CSS loader
+                *
+                * Usage:
+                * 1. Upload `css/custom_style.css` to a publicly accessible URL.
+                * 2. Replace `CUSTOM_CSS_URL` below with that absolute URL.
+                * 3. Paste this script into the Tistory mobile/skin script area or the post HTML.
+            */
+            (function () {
+            "use strict";
+                                    
+            var CUSTOM_CSS_URL = "https://tistory1.daumcdn.net/tistory/8636211/skin/images/custom_style.css";
+            var LINK_ID = "lge-story-custom-style";
+            var MAX_RETRY = 20;
+            var retryCount = 0;
+
+            if (!CUSTOM_CSS_URL || CUSTOM_CSS_URL.indexOf("./images/custom_style.css") === 0) {
+                console.warn("[lge-story] CUSTOM_CSS_URL 값을 실제 CSS 주소로 바꿔야 합니다.");
+                return;
+            }
+
+            function createLink() {
+                var link = document.createElement("link");
+                link.id = LINK_ID;
+                link.rel = "stylesheet";
+                link.type = "text/css";
+                link.href = CUSTOM_CSS_URL;
+                link.media = "all";
+                return link;
+            }
+
+            function ensureCssLoaded() {
+                var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
+                if (!head) {
+                return false;
+                }
+
+                var current = document.getElementById(LINK_ID);
+                if (current) {
+                if (current.href !== CUSTOM_CSS_URL) {
+                    current.href = CUSTOM_CSS_URL;
+                }
+                return true;
+                }
+
+                head.appendChild(createLink());
+                return true;
+            }
+
+            function retryUntilLoaded() {
+                if (ensureCssLoaded()) {
+                return;
+                }
+
+                retryCount += 1;
+                if (retryCount >= MAX_RETRY) {
+                console.warn("[lge-story] custom CSS를 head에 주입하지 못했습니다.");
+                return;
+                }
+
+                window.setTimeout(retryUntilLoaded, 300);
+            }
+
+            function watchDom() {
+                if (!window.MutationObserver) {
+                return;
+                }
+
+                var observer = new MutationObserver(function () {
+                ensureCssLoaded();
+                });
+
+                observer.observe(document.documentElement, {
+                childList: true,
+                subtree: true,
+                });
+            }
+
+            function init() {
+                retryUntilLoaded();
+                watchDom();
+            }
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", init, { once: true });
+            } else {
+                init();
+            }
+
+            window.addEventListener("pageshow", ensureCssLoaded);
+            document.addEventListener("visibilitychange", function () {
+                if (!document.hidden) {
+                ensureCssLoaded();
+                }
+            });
+            })();
+    </script>
     <!-- container // -->
 
     <!-- 
