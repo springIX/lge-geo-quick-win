@@ -147,7 +147,7 @@
         최고레벨 수준으로 적용하는걸 추천
     */
         /* color assets */
-        .lge_story_container .color_black { color: #000 !important; }
+        .lge_story_container .color_black { color: #000; !important; }
         .lge_story_container .gray400,
         .lge_story_container .gray400 * { color: var(--gray-400) !important; } /* 회색 400 텍스트 스타일 */
         .lge_story_container .gray500,
@@ -377,7 +377,7 @@
             /* page index list */
             .lge_story_container .lge_story_index_title h3 { font-size: 24px; }
             .lge_story_container .lge_story_index_content > li, 
-            .lge_story_container .lge_story_index_content > li p { font-size: 16px !important; margin-bottom: 0 !important; }
+            .lge_story_container .lge_story_index_content > li p { font-size: 16px !important; }
         }
 /*  core end */
 
@@ -424,9 +424,6 @@
         #lge_story_use_guide { 
             --gray-500: #525252;  
         }
-
-        #lge_story_use_guide .word_keep { word-break: keep-all;}
-
         /* header */
         #lge_story_use_guide .lge_story_hero_header { /* auto size */ }
         #lge_story_use_guide .lge_story_hero_title { padding: 10px 0 0; display: flex; justify-content: flex-start; align-items: stretch; flex-direction: column; gap: 10px }
